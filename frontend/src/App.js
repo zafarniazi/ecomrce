@@ -4,7 +4,6 @@ import Footer from "./components/Footer";
 import { Container } from "react-bootstrap";
 import HomeScreen from "./Screens/HomeScreen";
 import { Routes, Route } from "react-router-dom";
-import Products from "./components/Products";
 import ProductScreen from "./Screens/ProductScreen";
 const App = () => {
   return (

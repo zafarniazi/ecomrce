@@ -2,7 +2,10 @@ const express = require("express");
 const products = require("./data/products");
 const cors = require("cors");
 const app = express();
-const port = 3000;
+const mongoose = require("./config/db");
+const dotenv = require("dotenv");
+dotenv.config();
+const PORT = process.env.PORT || 5000;
 app.use(cors());
 
 app.get("/", (req, res) => {
@@ -16,6 +19,6 @@ app.get("/api/products/:id", (req, res) => {
   const product = products.find((product) => product._id === productId);
   res.send(product ? product : "no such product with this id");
 });
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
+app.listen(PORT, () => {
+  console.log(`Example app listening on port ${PORT}`);
 });

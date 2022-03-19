@@ -1,13 +1,5 @@
 import React, { useState, useEffect } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Card,
-  Button,
-  Image,
-  ListGroup,
-} from "react-bootstrap";
+import { Row, Col, Card, Button } from "react-bootstrap";
 import ReactStars from "react-rating-stars-component";
 import axios from "axios";
 import { Link, useParams } from "react-router-dom";
@@ -57,7 +49,7 @@ function ProductScreen() {
                 ? "iNSTOCK"
                 : "OUT OF STOCK"}{" "}
             </Card.Text>
-            <Button variant="primary" disabled={product.countInStock == 0}>
+            <Button variant="primary" disabled={product.countInStock === 0}>
               Add to cart
             </Button>
           </Col>
