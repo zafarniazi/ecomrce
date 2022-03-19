@@ -8,7 +8,7 @@ function HomeScreen() {
     <div>
       <h1>lates products</h1>
 
-      <Row xs={3} md={4} lg={5}>
+      <Row xs={5} md={4} lg={5}>
         {products.map((product) => {
           return (
             <Col>
